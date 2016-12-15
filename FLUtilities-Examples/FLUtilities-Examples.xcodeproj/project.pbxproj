@@ -12,7 +12,7 @@
 		6D61B8961E02D90E00BC1722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8941E02D90E00BC1722 /* Main.storyboard */; };
 		6D61B8981E02D90E00BC1722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8971E02D90E00BC1722 /* Assets.xcassets */; };
 		6D61B89B1E02D90E00BC1722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8991E02D90E00BC1722 /* LaunchScreen.storyboard */; };
-		6D61B8A51E02DA0200BC1722 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8A41E02DA0200BC1722 /* Helper.swift */; };
+		6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8C71E02E27100BC1722 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		6D61B8971E02D90E00BC1722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D61B89A1E02D90E00BC1722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D61B89C1E02D90E00BC1722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D61B8A41E02DA0200BC1722 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		6D61B8C71E02E27100BC1722 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 		6D61B8841E02D90E00BC1722 = {
 			isa = PBXGroup;
 			children = (
-				6D61B8A31E02D9E600BC1722 /* Source */,
+				6D61B8C51E02E27100BC1722 /* Source */,
 				6D61B88F1E02D90E00BC1722 /* FLUtilities-Examples */,
 				6D61B88E1E02D90E00BC1722 /* Products */,
 			);
@@ -67,13 +67,21 @@
 			path = "FLUtilities-Examples";
 			sourceTree = "<group>";
 		};
-		6D61B8A31E02D9E600BC1722 /* Source */ = {
+		6D61B8C51E02E27100BC1722 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6D61B8A41E02DA0200BC1722 /* Helper.swift */,
+				6D61B8C61E02E27100BC1722 /* Classes */,
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		6D61B8C61E02E27100BC1722 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6D61B8C71E02E27100BC1722 /* Helper.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +159,7 @@
 			files = (
 				6D61B8931E02D90E00BC1722 /* ViewController.swift in Sources */,
 				6D61B8911E02D90E00BC1722 /* AppDelegate.swift in Sources */,
-				6D61B8A51E02DA0200BC1722 /* Helper.swift in Sources */,
+				6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

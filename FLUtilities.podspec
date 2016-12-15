@@ -30,7 +30,7 @@ A collection of helper libraries and tools for iOS by Fox Labs. It contains util
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Source/*'
+  s.source_files = 'Source/**/*'
   
   # s.resource_bundles = {
   #   'FLUtilities' => ['FLUtilities/Assets/*.png']
