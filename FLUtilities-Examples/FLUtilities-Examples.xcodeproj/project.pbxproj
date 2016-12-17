@@ -14,6 +14,7 @@
 		6D61B89B1E02D90E00BC1722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8991E02D90E00BC1722 /* LaunchScreen.storyboard */; };
 		6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8C71E02E27100BC1722 /* Helper.swift */; };
 		6DCB37091E05567F001C29FD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB37081E05567F001C29FD /* Utilities.swift */; };
+		6DCB370B1E0559D7001C29FD /* UIAlertController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6D61B89C1E02D90E00BC1722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D61B8C71E02E27100BC1722 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6DCB37081E05567F001C29FD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				6D61B8C71E02E27100BC1722 /* Helper.swift */,
 				6DCB37081E05567F001C29FD /* Utilities.swift */,
+				6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D61B8931E02D90E00BC1722 /* ViewController.swift in Sources */,
+				6DCB370B1E0559D7001C29FD /* UIAlertController+Utility.swift in Sources */,
 				6D61B8911E02D90E00BC1722 /* AppDelegate.swift in Sources */,
 				6DCB37091E05567F001C29FD /* Utilities.swift in Sources */,
 				6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */,
