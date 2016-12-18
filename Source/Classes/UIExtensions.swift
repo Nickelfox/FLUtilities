@@ -11,6 +11,101 @@ import UIKit
 
 extension UIView {
 	
+	func addAndFitSubview(view: UIView) {
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.frame = self.bounds
+		self.addSubview(view)
+		let views = ["view": view]
+		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: views))
+		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: views))
+	}
+	
+}
+
+extension UITableView {
+	
+	@IBInspectable var backgroundViewColor: UIColor? {
+		set {
+			self.backgroundView = UIView()
+			self.backgroundView?.backgroundColor = newValue
+		}
+		get {
+			return self.backgroundView?.backgroundColor
+		}
+	}
+	
+	func deselectAllRows(animated: Bool) {
+		if let indexPaths = self.indexPathsForSelectedRows {
+			for indexPath in indexPaths {
+				self.deselectRow(at: indexPath, animated: animated)
+			}
+		}
+	}
+	
+}
+
+extension UIScrollView {
+	
+	func preparePaintedPullingHeader(color: UIColor) {
+		let mainScreen = UIScreen.main
+		let length = max(mainScreen.bounds.height, mainScreen.bounds.width)
+		let paintedView = UIView()
+		paintedView.frame = CGRect.init(x: 0, y: -length, width: length, height: length)
+		paintedView.backgroundColor = color
+		self.addSubview(paintedView)
+	}
+	
+}
+
+extension UICollectionView {
+	
+	@IBInspectable var backgroundViewColor: UIColor? {
+		set {
+			self.backgroundView = UIView()
+			self.backgroundView?.backgroundColor = newValue
+		}
+		get {
+			return self.backgroundView?.backgroundColor
+		}
+	}
+	
+	func deselectAllItems(animated: Bool) {
+		if let indexPaths = self.indexPathsForSelectedItems {
+			for indexPath in indexPaths {
+				self.deselectItem(at: indexPath, animated: animated)
+			}
+		}
+	}
+	
+}
+
+extension UITableViewCell {
+	
+	@IBInspectable var selectedBackgroundViewColor: UIColor? {
+		set {
+			self.selectedBackgroundView = UIView()
+			self.selectedBackgroundView?.backgroundColor = newValue
+		}
+		get {
+			return self.selectedBackgroundView?.backgroundColor
+		}
+	}
+	
+	@IBInspectable var backgroundViewColor: UIColor? {
+		set {
+			self.backgroundView = UIView()
+			self.backgroundView?.backgroundColor = newValue
+		}
+		get {
+			return self.backgroundView?.backgroundColor
+		}
+	}
+	
+}
+
+
+extension UIView {
+	
 	func roundedCorner(radius: CGFloat) {
 		self.clipsToBounds = true
 		self.layer.cornerRadius = radius
