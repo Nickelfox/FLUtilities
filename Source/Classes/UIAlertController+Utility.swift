@@ -1,6 +1,6 @@
 //
 //  UIAlertController+Utility.swift
-//  FLUtilities-Examples
+//  FLUtilities
 //
 //  Created by Ravindra Soni on 17/12/16.
 //  Copyright © 2016 Nickelfox. All rights reserved.
