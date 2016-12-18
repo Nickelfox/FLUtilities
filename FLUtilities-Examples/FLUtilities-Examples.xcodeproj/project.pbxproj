@@ -10,6 +10,7 @@
 		6D1659541E0669210032395D /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1659531E0669210032395D /* UIColor+Utility.swift */; };
 		6D1659561E0669600032395D /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1659551E0669600032395D /* Date+Utility.swift */; };
 		6D1659581E066A330032395D /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1659571E066A330032395D /* String+Validation.swift */; };
+		6D16595A1E066A660032395D /* Device+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1659591E066A660032395D /* Device+Utility.swift */; };
 		6D61B8911E02D90E00BC1722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8901E02D90E00BC1722 /* AppDelegate.swift */; };
 		6D61B8931E02D90E00BC1722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8921E02D90E00BC1722 /* ViewController.swift */; };
 		6D61B8961E02D90E00BC1722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8941E02D90E00BC1722 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		6D1659531E0669210032395D /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		6D1659551E0669600032395D /* Date+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utility.swift"; sourceTree = "<group>"; };
 		6D1659571E066A330032395D /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		6D1659591E066A660032395D /* Device+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+Utility.swift"; sourceTree = "<group>"; };
 		6D61B88D1E02D90E00BC1722 /* FLUtilities-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FLUtilities-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D61B8901E02D90E00BC1722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D61B8921E02D90E00BC1722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				6D1659531E0669210032395D /* UIColor+Utility.swift */,
 				6D1659551E0669600032395D /* Date+Utility.swift */,
 				6D1659571E066A330032395D /* String+Validation.swift */,
+				6D1659591E066A660032395D /* Device+Utility.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				6D1659541E0669210032395D /* UIColor+Utility.swift in Sources */,
 				6DCB370D1E055A49001C29FD /* UIExtensions.swift in Sources */,
 				6DCB37091E05567F001C29FD /* Utilities.swift in Sources */,
+				6D16595A1E066A660032395D /* Device+Utility.swift in Sources */,
 				6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
