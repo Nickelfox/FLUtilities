@@ -33,7 +33,7 @@ public struct ActionInterface {
 	public var style: UIAlertActionStyle = .default
 	public var alertAction: UIAlertAction!
 	
-	init(id: AnyObject? = nil, title: String, style: UIAlertActionStyle = .default) {
+	public init(id: AnyObject? = nil, title: String, style: UIAlertActionStyle = .default) {
 		self.id = id ?? title as AnyObject!
 		self.title = title
 		self.style = style
