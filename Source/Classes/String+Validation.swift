@@ -24,9 +24,8 @@ public extension String {
 	}
 	
 	var isPhone: Bool {
-		return self.characters.count <= 14 && self.characters.count >= 10
+		return self.count <= 14 && self.count >= 10
 	}
-	
 	
 	var isAlphabetic: Bool {
 		return self.matchRegex(regex: kAlphabeticRegex)
@@ -61,7 +60,7 @@ public extension String {
 	}
 	
 	var isValidPassword: Bool {
-		return self.characters.count >= 8;
+		return self.count >= 8;
 	}
 	
 }
