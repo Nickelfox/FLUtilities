@@ -19,7 +19,6 @@
 		6D61B8961E02D90E00BC1722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8941E02D90E00BC1722 /* Main.storyboard */; };
 		6D61B8981E02D90E00BC1722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8971E02D90E00BC1722 /* Assets.xcassets */; };
 		6D61B89B1E02D90E00BC1722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B8991E02D90E00BC1722 /* LaunchScreen.storyboard */; };
-		6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61B8C71E02E27100BC1722 /* Helper.swift */; };
 		6DCB37091E05567F001C29FD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB37081E05567F001C29FD /* Utilities.swift */; };
 		6DCB370B1E0559D7001C29FD /* UIAlertController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */; };
 		6DCB370D1E055A49001C29FD /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB370C1E055A49001C29FD /* UIExtensions.swift */; };
@@ -41,7 +40,6 @@
 		6D61B8971E02D90E00BC1722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D61B89A1E02D90E00BC1722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D61B89C1E02D90E00BC1722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D61B8C71E02E27100BC1722 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6DCB37081E05567F001C29FD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utility.swift"; sourceTree = "<group>"; };
 		6DCB370C1E055A49001C29FD /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		6D61B8C61E02E27100BC1722 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6D61B8C71E02E27100BC1722 /* Helper.swift */,
 				6DCB37081E05567F001C29FD /* Utilities.swift */,
 				6DCB370A1E0559D7001C29FD /* UIAlertController+Utility.swift */,
 				6DCB370C1E055A49001C29FD /* UIExtensions.swift */,
@@ -204,7 +201,6 @@
 				6DCB370D1E055A49001C29FD /* UIExtensions.swift in Sources */,
 				6DCB37091E05567F001C29FD /* Utilities.swift in Sources */,
 				6D16595A1E066A660032395D /* Device+Utility.swift in Sources */,
-				6D61B8C81E02E27100BC1722 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

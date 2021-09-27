@@ -11,15 +11,26 @@ import UIKit
 
 public extension UIView {
 	
-	func addAndFitSubview(view: UIView) {
-		view.translatesAutoresizingMaskIntoConstraints = false
-		view.frame = self.bounds
-		self.addSubview(view)
-		let views = ["view": view]
-		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: views))
-		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: views))
-	}
-	
+    func addAndFitSubview(view: UIView, top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) {
+        addSubview(view)
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: topAnchor, constant: top),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leading),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailing),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottom)
+        ])
+    }
+    
+    func addAndFitSubview(view: UIView, top: CGFloat, left: CGFloat, right: CGFloat, bottom: CGFloat) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: topAnchor, constant: top),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: left),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: right),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottom)
+        ])
+    }
 }
 
 public extension UITableView {
@@ -41,7 +52,6 @@ public extension UITableView {
 			}
 		}
 	}
-	
 }
 
 public extension UIScrollView {
@@ -217,7 +227,6 @@ public extension UITableViewHeaderFooterView {
 	class var defaultNib: UINib {
 		return UINib(nibName: self.className(), bundle: nil)
 	}
-	
 }
 
 public extension UICollectionViewCell {
@@ -229,5 +238,4 @@ public extension UICollectionViewCell {
 	class var defaultNib: UINib {
 		return UINib(nibName: self.className(), bundle: nil)
 	}
-	
 }
