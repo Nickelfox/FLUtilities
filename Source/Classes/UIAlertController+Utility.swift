@@ -47,7 +47,7 @@ public extension UIAlertController {
 		let okActionInterface = ActionInterface(title: NSLocalizedString("Ok", comment: ""))
 		
 		UIAlertController.showAlert(
-			title: "",
+			title: nil,
 			message: message,
 			actionInterfaceList: [okActionInterface])
 		{ (interface) in
