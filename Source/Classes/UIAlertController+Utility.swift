@@ -29,7 +29,7 @@ public struct ActionInterface {
 	// you can set your own id as well for uniquesness
 	
 	public var id: AnyObject!
-	public var title: String = ""
+	public var title: String
     public var style: UIAlertAction.Style = .default
 	public var alertAction: UIAlertAction!
 	
