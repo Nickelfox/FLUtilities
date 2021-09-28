@@ -29,7 +29,7 @@ public struct ActionInterface {
 	// you can set your own id as well for uniquesness
 	
 	public var id: AnyObject!
-	public var title: String = ""
+	public var title: String
     public var style: UIAlertAction.Style = .default
 	public var alertAction: UIAlertAction!
 	
@@ -47,7 +47,7 @@ public extension UIAlertController {
 		let okActionInterface = ActionInterface(title: NSLocalizedString("Ok", comment: ""))
 		
 		UIAlertController.showAlert(
-			title: "",
+			title: nil,
 			message: message,
 			actionInterfaceList: [okActionInterface])
 		{ (interface) in
@@ -90,7 +90,7 @@ public extension UIAlertController {
 	}
 	
 	class func alertController(title: String?, message: String?, preferredStyle: UIAlertController.Style, actionInterfaceList: [ActionInterface], handler: @escaping AlertHandler) -> UIAlertController {
-		let alertController = UIAlertController(title: title ?? "", message: message, preferredStyle: preferredStyle)
+		let alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
 		for var actionInterface in actionInterfaceList {
 			let button = UIAlertAction(title: actionInterface.title, style: actionInterface.style, handler: { (action: UIAlertAction) -> Void in
 				actionInterface.alertAction = action
@@ -155,7 +155,7 @@ public extension UIViewController {
 		)
 	}
 	
-	func showAlertController(title: String?, message: String?, preferredStyle: UIAlertController.Style, actionInterfaceList: [ActionInterface], handler: @escaping AlertHandler) {
+    func showAlertController(title: String?, message: String?, preferredStyle: UIAlertController.Style, actionInterfaceList: [ActionInterface], handler: @escaping AlertHandler) {
 		let alertController = UIAlertController.alertController(
 			title: title,
 			message: message,
