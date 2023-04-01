@@ -19,7 +19,75 @@ public extension UIView {
 		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: views))
 		self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: views))
 	}
-	
+    
+    func anchor(top: NSLayoutYAxisAnchor? = nil,
+                leading:NSLayoutXAxisAnchor? = nil,
+                bottom: NSLayoutYAxisAnchor? = nil,
+                trailing: NSLayoutXAxisAnchor? = nil,
+                centerY: NSLayoutYAxisAnchor? = nil,
+                centerYConstant: CGFloat = 0,
+                centerX: NSLayoutXAxisAnchor? = nil,
+                centerXConstant: CGFloat = 0,
+                padding: UIEdgeInsets = .zero,
+                height: CGFloat = 0,
+                width: CGFloat = .zero) {
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        if let top = top {
+            self.topAnchor.constraint(equalTo: top,
+                                      constant: padding.top).isActive = true
+        }
+        
+        if let leading = leading {
+            self.leadingAnchor.constraint(equalTo: leading,
+                                          constant: padding.left).isActive = true
+        }
+        
+        if let bottom = bottom {
+            self.bottomAnchor.constraint(equalTo: bottom,
+                                         constant: -padding.bottom).isActive = true
+        }
+        
+        if let trailing = trailing {
+            self.trailingAnchor.constraint(equalTo: trailing,
+                                           constant: -padding.right).isActive = true
+        }
+        
+        if let centerY = centerY {
+            self.centerYAnchor.constraint(equalTo: centerY,
+                                          constant: centerYConstant).isActive = true
+        }
+        
+        if let centerX = centerX {
+            self.centerXAnchor.constraint(equalTo: centerX,
+                                          constant: centerXConstant).isActive = true
+        }
+        
+        if width != 0 {
+            self.widthAnchor.constraint(equalToConstant: width).isActive = true
+        }
+        
+        if height != 0 {
+            self.heightAnchor.constraint(equalToConstant: height).isActive = true
+        }
+    }
+    
+    func addAndFitSubView(view: UIView,
+                          topConstraint: CGFloat,
+                          leadingConstraint: CGFloat,
+                          trailingConstraint: CGFloat,
+                          bottomConstraint: CGFloat,
+                          autoresizeMask: Bool = false) {
+        view.translatesAutoresizingMaskIntoConstraints = autoresizeMask
+        self.addSubview(view)
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: topAnchor, constant: topConstraint),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingConstraint),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailingConstraint),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstraint)
+        ])
+    }
 }
 
 public extension UITableView {
@@ -118,6 +186,7 @@ public extension UIView {
 	class func nib(nibName: String? = nil) -> UINib {
 		return UINib(nibName: nibName ?? self.className(), bundle: nil)
 	}
+    
 }
 
 public extension UIView {
@@ -194,6 +263,7 @@ public extension UIImage {
 }
 
 public extension UITableViewCell {
+    
 	class var defaultReuseIdentifier: String {
 		return self.className()
 	}
@@ -205,6 +275,7 @@ public extension UITableViewCell {
 }
 
 public extension UITableViewHeaderFooterView {
+    
 	class var defaultReuseIdentifier: String {
 		return self.className()
 	}
