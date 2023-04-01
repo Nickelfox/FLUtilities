@@ -24,7 +24,7 @@ Once you have your Swift package set up, adding FLUtilities as a dependency is a
 
 ```
 dependencies: [
-    .package(url: "https://github.com/Nickelfox/FLUtilities", .branch("develop"))
+    .package(url: "https://github.com/Nickelfox/FLUtilities")
 ]
 ```
 
