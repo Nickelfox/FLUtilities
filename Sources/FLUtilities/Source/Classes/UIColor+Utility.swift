@@ -22,10 +22,15 @@ public extension UIColor {
 		self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, opacity:alpha)
 	}
 	
-	convenience init(hexString: String) {
-		var hexValue: CUnsignedInt = 0
-		let scanner = Scanner(string: hexString)
-		scanner.scanHexInt32(&hexValue)
+    convenience init(hexString: String) {
+        var formattedHexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        if formattedHexString.hasPrefix("#") {
+            formattedHexString = String(formattedHexString.dropFirst())
+        }
+        assert(formattedHexString.count == 6, "Not a valid hex code")
+        var hexValue: CUnsignedInt = 0
+        let scanner = Scanner(string: hexString)
+		scanner.scanHexInt64(&hexValue)
 		let value = Int(hexValue)
 		self.init(red:(value >> 16) & 0xff, green:(value >> 8) & 0xff, blue:value & 0xff)
 	}
