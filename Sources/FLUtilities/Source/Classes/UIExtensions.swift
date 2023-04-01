@@ -122,17 +122,14 @@ public extension UIView {
 
 public extension UIView {
 	
-	func applyShadow(
-		apply: Bool,
-		color: UIColor = UIColor.black,
-		offset: CGSize = CGSize(width: 0.0, height: 2.0),
-		opacity: Float = 0.2, radius: Float = 1.0) {
-		
+    func applyShadow(apply: Bool,
+                     color: UIColor = UIColor.black,
+                     offset: CGSize = CGSize(width: 0.0, height: 2.0),
+                     opacity: Float = 0.2, radius: Float = 1.0) {
 		self.layer.shadowColor = apply ? color.cgColor : UIColor.white.withAlphaComponent(0.0).cgColor
 		self.layer.shadowOffset = apply ? offset : CGSize(width: 0.0, height: 0.0)
 		self.layer.shadowOpacity = apply ? opacity : 0.0
 		self.layer.shadowRadius = apply ? CGFloat(radius) : 0.0
-		
 	}
 	
 	func applyGlow(apply: Bool, color: UIColor) {
@@ -145,21 +142,19 @@ public extension UIView {
 }
 public extension UIImage {
 	
-	static func draw(
-		size: CGSize,
-		opaque: Bool = false,
-		scale: CGFloat = 0,
-		graphics: (CGContext) -> Void) -> UIImage
-	{
-		var image: UIImage?
-		autoreleasepool {
-			UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
-			graphics(UIGraphicsGetCurrentContext()!)
-			image = UIGraphicsGetImageFromCurrentImageContext()
-			UIGraphicsEndImageContext()
-		}
-		return image!
-	}
+    static func draw(size: CGSize,
+                     opaque: Bool = false,
+                     scale: CGFloat = 0,
+                     graphics: (CGContext) -> Void) -> UIImage {
+        var image: UIImage?
+        autoreleasepool {
+            UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+            graphics(UIGraphicsGetCurrentContext()!)
+            image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        return image!
+    }
 	
 	func imageWithAlpha(alpha: CGFloat) -> UIImage {
 		let rect = CGRect(origin: CGPoint.zero, size: size)
