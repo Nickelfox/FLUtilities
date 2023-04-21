@@ -67,17 +67,6 @@ print(name.capitalizingFirstLetter())
 Let's try working with UIAlertControllers:
 
 ```swift
-class func showAlertForMessage(message: String) {
-	let okActionInterface = ActionInterface(title: NSLocalizedString("Ok", comment: ""))
-		
-	UIAlertController.showAlert(
-		title: "",
-		message: message,
-		actionInterfaceList: [okActionInterface])
-	{ (interface) in
-			
-	}
-}
 	
 class func showActionSheet(title: String?, message: String?, actionInterfaceList: [ActionInterface], handler: @escaping AlertHandler) {
 	self.showAlertController(
@@ -102,6 +91,13 @@ class func showAlertController(title: String?, message: String?, preferredStyle:
 		})
 	}
 }
+
+UIAlertController.showAlertForMessage("Alert For Message Created Successfully")
+
+UIAlertController.showActionSheet(title: "Title",
+                                          message: "Title", actionInterfaceList: [interface1,
+                                                                             interface2,
+                                                                              interface3]) { }
 ```
 The extension is used to show different types of alerts or action sheet like shared above.
 
@@ -110,7 +106,38 @@ An extension for colors is also present. Below is one example for it's usage :
 ```swift
 var color = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
 ```
-After providing the respective floar values for above arguments, the desired result will be obtained.
+After providing the respective float values for above arguments, the desired result will be obtained.
+
+Now comes the usage of view, tableView, scrollView, collectionView, tableView and collectionView cell, images, etc.
+
+To set tableView's or collectionView's backgroundView color:
+```swift
+self.tableView.backgroundViewColor = .clear
+
+self.collectionView.backgroundViewColor = .clear
+```
+
+This piece of code sets tableView's and collectionView's background view color to clear.
+
+A view's rounded corners can be achieved by:
+
+```swift
+self.view.roundedCorner(radius: 4)
+```
+
+You can also provide a string nibName to a UIView that returns a UINib, by:
+
+```swift
+self.view.nib(nibName: "ParentViewController")
+```
+If you check the example, you can also see helper methods to apply shadow or glow to a respective UIView. Also, an extension for UIImage to draw an image, fetch image with alpha or to get a tinted image with a color is also present. You can use it like mentioned below:
+
+```swift
+self.backgroundImage.imageWithAlpha(alpha: 0.5)
+
+self.backgroundImage.imageTintedWithColor(color: .green)
+```
+
 
 ## Requirements
 
